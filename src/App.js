@@ -3,9 +3,9 @@ import "./App.css";
 import { useEffect } from "react";
 
 function App() {
-  const shapes = [{}, {}, {}, {}, {}, {}];
+  const shapes = [{}, {}, {}];
   const circleWidth = 600; // in px
-  const shapeExtraWidth = 120;
+  const shapeExtraWidth = 80;
   const shapeWidth = circleWidth / shapes.length + shapeExtraWidth;
 
   useEffect(() => {
