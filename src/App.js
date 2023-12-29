@@ -3,9 +3,9 @@ import "./App.css";
 import { useEffect } from "react";
 
 function App() {
-  const shapes = [{}, {}, {}];
+  const shapes = [{}, {}, {}, {}, {}, {}, {}];
   const circleWidth = 600; // in px
-  const shapeExtraWidth = 80;
+  const shapeExtraWidth = 140;
   const shapeWidth = circleWidth / shapes.length + shapeExtraWidth;
 
   useEffect(() => {
@@ -25,9 +25,11 @@ function App() {
           return (
             <div key={idx} className="item">
               <img src={shapeImage} width={shapeWidth} height={shapeWidth} />
-              <p className="item-text">Hlo</p>
             </div>
           );
+        })}
+        {shapes.map((item, idx) => {
+          return <p className="item-text">Hlo</p>;
         })}
       </div>
     </>

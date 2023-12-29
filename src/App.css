@@ -13,5 +13,7 @@
 
 
 .item-text {
-
+  position: absolute;
+  right: 285px;
+  top: 100px;
 }
