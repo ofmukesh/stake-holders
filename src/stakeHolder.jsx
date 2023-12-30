@@ -9,12 +9,18 @@ const shapeWidths = {
   7: 230,
   8: 220,
   9: 190,
-  8: 180,
 };
 
 function StakeHolder({ entries }) {
-  const circleWidth = 1000;
-  const shapeExtraWidth = shapeWidths[entries.length];
+  var circleWidth = 1000;
+  var shapeExtraWidth = shapeWidths[entries.length];
+  if (window.innerWidth < 612) {
+    shapeExtraWidth -= 150;
+    circleWidth = 350;
+  } else if (window.innerWidth < 900) {
+    shapeExtraWidth -= 60;
+    circleWidth = 600;
+  }
   const shapeWidth = circleWidth / entries.length + shapeExtraWidth;
 
   useEffect(() => {
@@ -50,9 +56,9 @@ function StakeHolder({ entries }) {
               <div className="image-text">
                 <b>{item.role}</b>
                 <br />
-                {item.description}
+                <div className="desc">{item.description}</div>
               </div>
-              <i className={`icons fa-solid fa-3x ${item.icon} item-icon`}></i>
+              <i className={`icons fa-solid ${item.icon} item-icon`}></i>
             </div>
           </div>
         );

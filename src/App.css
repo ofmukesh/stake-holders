@@ -20,6 +20,8 @@
   left: 43%;
   transform: translate(-50%, -50%);
   color: #126785;
+  font-size: 3em !important;
+
 }
 
 .image-div {
@@ -37,6 +39,22 @@
   font-size: 14px;
 }
 
+
 .image-text b {
   font-size: 20px;
+}
+
+/* Responsive Styles */
+@media only screen and (max-width: 600px) {
+  .image-text b {
+    font-size: 11px;
+  }
+
+  .image-text .desc {
+    display: none;
+  }
+
+  .item-icon {
+    font-size: 1em !important;
+  }
 }
