@@ -3,11 +3,13 @@ import shapeImage from "../src/shape.svg";
 
 const shapeWidths = {
   3: 150,
-  4: 110,
+  4: 200,
   5: 230,
   6: 220,
   7: 230,
-  8: 240,
+  8: 220,
+  9: 190,
+  8: 180,
 };
 
 function StakeHolder({ entries }) {
@@ -17,9 +19,13 @@ function StakeHolder({ entries }) {
 
   useEffect(() => {
     var items = document.getElementsByClassName("item");
+    var text_items = document.getElementsByClassName("image-text");
+    var icons = document.getElementsByClassName("icons");
     var angle = 360 / items.length;
     for (var i = 0; i < items.length; i++) {
       items[i].style.transform = `rotate(${angle * i}deg)`;
+      text_items[i].style.transform = `rotate(-${angle * i}deg)`;
+      icons[i].style.transform = `rotate(-${angle * i}deg)`;
     }
   }, []);
 
@@ -46,7 +52,7 @@ function StakeHolder({ entries }) {
                 <br />
                 {item.description}
               </div>
-              <i className={`fa-solid fa-3x ${item.icon} item-icon`}></i>
+              <i className={`icons fa-solid fa-3x ${item.icon} item-icon`}></i>
             </div>
           </div>
         );
