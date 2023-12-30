@@ -1,7 +1,6 @@
 .main {
   border-radius: 50%;
   position: relative;
-  border: 1px solid black;
 }
 
 .item {
@@ -11,23 +10,34 @@
   text-align: center;
   justify-items: center;
   justify-content: center;
+  display: grid;
 }
 
 .item-icon {
-  z-index: 22;
+  z-index: 1;
   position: absolute;
-  width: 50%;
-  height: 50%;
-  text-align: center;
+  top: 80%;
+  left: 51%;
+  transform: translate(-50%, -50%);
   color: #126785;
 }
 
+.image-div {
+  position: relative;
+}
 
-.icons {
-  width: 98%;
-  height: 98%;
+.image-text {
   position: absolute;
-  top: 75%;
-  left: 75%;
+  top: 40%;
+  left: 50%;
   transform: translate(-50%, -50%);
+  color: #ffffff;
+  font-size: 20px;
+  color: black;
+  text-align: left;
+  font-size: 16px;
+}
+
+.image-text b {
+  font-size: 20px;
 }
