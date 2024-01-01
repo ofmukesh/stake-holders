@@ -11,6 +11,14 @@ const shapeWidths = {
   9: 190,
 };
 
+function truncateDescription(description, maxWords) {
+  const words = description.split(" ");
+  if (words.length <= maxWords) {
+    return description;
+  }
+  return words.slice(0, maxWords).join(" ") + "...";
+}
+
 function StakeHolder({ entries }) {
   var circleWidth = 1000;
   var shapeExtraWidth = shapeWidths[entries.length];
@@ -41,6 +49,8 @@ function StakeHolder({ entries }) {
       style={{ width: circleWidth + "px", height: circleWidth + "px" }}
     >
       {entries.map((item, idx) => {
+        const truncatedDescription = truncateDescription(item.description, 14);
+
         return (
           <div key={idx} className="item">
             <div
@@ -56,7 +66,7 @@ function StakeHolder({ entries }) {
               <div className="image-text">
                 <b>{item.role}</b>
                 <br />
-                <div className="desc">{item.description}</div>
+                <div className="desc">{truncatedDescription}</div>
               </div>
               <i className={`icons fa-solid ${item.icon} item-icon`}></i>
             </div>
