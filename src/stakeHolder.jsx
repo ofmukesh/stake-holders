@@ -1,5 +1,5 @@
 import React, { useEffect } from "react";
-import shapeImage from "../src/shape2.svg";
+import shapeImage from "../src/shape.svg";
 
 const shapeWidths = {
   3: 150,
