@@ -17,7 +17,7 @@
   z-index: 1;
   position: absolute;
   top: 73%;
-  left: 45%;
+  left: 49%;
   transform: translate(-50%, -50%);
   color: #126785;
   font-size: 3em !important;
@@ -26,14 +26,21 @@
 
 .image-div {
   position: relative;
+
+}
+
+.image-div img {
+  transform: rotate(33deg);
+  position: relative;
+  margin: -45px;
 }
 
 .image-text {
   position: absolute;
   top: 21%;
-  left: 28%;
-  right: 31%;
-  bottom: 45%;
+  left: 39%;
+  right: 20%;
+  bottom: 52%;
   color: black;
   text-align: left;
   font-size: 14px;
@@ -56,5 +63,11 @@
 
   .item-icon {
     font-size: 1em !important;
+  }
+
+  .image-div img {
+    transform: rotate(33deg);
+    position: relative;
+    margin: -15px;
   }
 }
